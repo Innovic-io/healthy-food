@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import "icons";
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+
+body {
+  font-family: 'Fira Sans', sans-serif !important;
+  font-weight: 400;
+}

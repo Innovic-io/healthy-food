@@ -1,0 +1,145 @@
+
+.leftside h3{
+  color:#17161f;
+  margin:0 0 30px;
+  font-size:24px;
+  font-weight:500;
+  text-transform:uppercase;
+}
+.leftside .highlight, .leftside .popular, .leftside .bestseller{
+  margin:0 0 50px;
+}
+.leftside .highlight ul, .leftside .popular ul{
+  margin:0;
+}
+.leftside .highlight ul li{
+  padding:0 0 10px;
+}
+.leftside .highlight ul li:last-child{
+  padding:0 0 0;
+}
+.leftside .highlight ul li a, .leftside .popular ul li a{
+  font-size:14px;
+  font-weight:400;
+  color:#686868;
+}
+.leftside .highlight ul li a:hover, .leftside .popular ul li a:hover{
+  color:#13d22e;
+}
+.leftside .popular ul li{
+  background:#f3f3f3;
+  border-radius:40px;
+  padding: 8px 16px 7px;
+  margin:0 6px 15px 0;
+  line-height:12px;
+}
+.leftside .popular ul li:last-child{
+  margin:0 5px 0 0;
+}
+.leftside .bestseller .box:last-child{
+  margin-bottom:0;
+}
+.prettyradio > a {
+  //background: rgba(0, 0, 0, 0) url("../assets/images/uncheck.png") no-repeat scroll 0 0;
+  width:11px;
+  height:11px;
+  margin-right:10px;
+  top:0;
+}
+.prettyradio > a.checked {
+ // background: url("../assets/images/check.png") no-repeat;
+}
+.prettycheckbox > a {
+  width:24px;
+  height:24px;
+  margin-right:10px;
+  //background: url(../images/checkbox.png) 0 0;
+  border:none;
+}
+.prettycheckbox > a.checked {
+  //background: url(../images/checkbox1.png) 0 0;
+}
+
+.vegetable{
+  margin:0 0 50px;
+}
+.vegetable .commontop h4{
+  text-transform:capitalize;
+}
+.vegetable .commontop h4 i:first-child{
+  margin-left:25px;
+}
+.vegetables .box, .fruits .box, .leftside .bestseller .box{
+  margin-bottom:30px;
+  min-height:100px;
+}
+.vegetables .box .image, .fruits .box .image, .leftside .bestseller .box .image{
+  float:left;
+  border:1px solid #F3F3F3;
+}
+.vegetables .box .caption, .fruits .box .caption, .leftside .bestseller .box .caption{
+  padding-left:14px;
+  margin-left:120px;
+}
+.vegetables .box .caption h4, .fruits .box .caption h4, .leftside .bestseller .box .caption h4{
+  font-weight:500;
+  font-size:16px;
+  color:#17161f;
+  margin:0 0 5px;
+}
+.vegetables .box .caption p, .fruits .box .caption p, .leftside .bestseller .box .caption p{
+  font-weight:400;
+  font-size:14px;
+  color:#686868;
+  margin:0 0 14px;
+}
+.vegetables .box .caption .button-group button, .fruits .box .caption .button-group button, .leftside .bestseller .box .caption .button-group button{
+  background:none;
+  border-radius:50%;
+  border:1px solid #ccc;
+  color:#686868;
+  padding:5px 7px;
+  font-size:14px;
+  width:30px;
+  height:30px;
+  text-align:center;
+}
+.vegetables .box .caption .button-group button + button, .fruits .box .caption .button-group button + button, .leftside .bestseller .box .caption .button-group button + button{
+  margin-left:10px;
+}
+.vegetables .box .caption .button-group button:hover, .fruits .box .caption .button-group button:hover, .leftside .bestseller .box .caption .button-group button:hover{
+  background:#13d22e;
+  color:#fff;
+  border:1px solid #13d22e;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.30);
+}
+.vegetables .owl-buttons .owl-prev, .fruits .owl-buttons .owl-prev{
+  left:76%;
+}
+.vegetables .owl-buttons .owl-next, .fruits .owl-buttons .owl-next{
+  right:15px;
+}
+.vegetables .owl-buttons .owl-prev, .vegetables .owl-buttons .owl-next, .fruits .owl-buttons .owl-prev, .fruits .owl-buttons .owl-next{
+  color:#686868;
+  background:#fff;
+  padding:5px 18px;
+  top: -20%;
+  border:1px solid #ccc;
+}
+.vegetables .owl-buttons .owl-prev:hover, .vegetables .owl-buttons .owl-next:hover, .fruits .owl-buttons .owl-prev:hover, .fruits .owl-buttons .owl-next:hover{
+  background:#13d22e;
+  border:1px solid #13d22e;
+  color:#fff;
+  opacity: 100;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.30);
+}
+.vegetables .owl-buttons .owl-prev, .fruits .owl-buttons .owl-prev{
+  border-radius:20px 0 0 20px;
+}
+.vegetables .owl-buttons .owl-next, .fruits .owl-buttons .owl-next{
+  border-radius:0 20px 20px 0;
+}
+.vegetables .owl-buttons .owl-prev i, .vegetables .owl-buttons .owl-next i, .fruits .owl-buttons .owl-prev i, .fruits .owl-buttons .owl-next i{
+  font-size:20px;
+  margin:0;
+}

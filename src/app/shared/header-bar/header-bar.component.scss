@@ -1,0 +1,350 @@
+header {
+  background: url(../../../assets/images/index-bg.png) center center;
+  padding: 38px 0;
+}
+
+header #logo {
+  position: relative;
+}
+
+header #logo img {
+  margin: -28px auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#menu .navbar {
+  margin: 0;
+  min-height: 0;
+  border: 0 solid transparent;
+}
+
+#menu .nav > li > a {
+  background-color: transparent;
+  color: #17161f;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 15px 42px 15px 26px;
+  line-height: 14px;
+}
+
+#menu .nav > li:nth-child(4) > a {
+  margin: 0 40px 0 0;
+}
+
+#menu .nav > li:nth-child(5) > a {
+  margin-left: 240px;
+}
+
+#menu .nav > li:last-child > a {
+  padding: 15px 0 15px 26px;
+}
+
+#menu .nav > li > a:hover, #menu .navbar-nav > .active > a, #menu .navbar-nav > .active > a:hover, #menu .navbar-nav > .active > a:focus {
+  color: #13d22e;
+}
+
+#menu .dropdown .dropdown-menu {
+  background: #fff;
+  padding: 0;
+  border: none;
+}
+
+#menu .dropdown-menu:after {
+  border-top: 4px transparent dashed;
+  border-bottom: 8px solid #13d22e;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  position: absolute;
+  left: 46%;
+  top: -12px;
+  text-align: center;
+  display: block;
+  content: "";
+}
+
+#menu .topheader .dropdown-menu {
+  width: 1140px;
+}
+
+#menu .topheader .dropdown-menu:after {
+  left: 3%;
+}
+
+#menu .topheader .dropdown-menu h2 {
+  margin: 0;
+  background: #13d22e;
+  color: #fff;
+  font-size: 17px;
+  padding: 20px;
+}
+
+#menu .topheader .dropdown-menu h2 span {
+  color: #000;
+}
+
+#menu .topheader .dropdown-menu h4 {
+  margin: 40px 0 30px;
+  color: #17161f;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+#menu .topheader .dropdown-menu ul {
+  margin: 0 0 20px;
+}
+
+#menu .topheader .dropdown-menu ul li {
+  padding: 10px 0;
+}
+
+#menu .topheader .dropdown-menu ul li a {
+  font-size: 16px;
+  color: #686868;
+}
+
+#menu .topheader .dropdown-menu .new, #menu .topheader .dropdown-menu .hot {
+  background: #13d22e;
+  color: #fff;
+  padding: 6px 10px;
+  text-transform: uppercase;
+  margin-left: 4px;
+}
+
+#menu .topheader .dropdown-menu .hot {
+  background: #17161f;
+}
+
+#menu .topheader .dropdown-menu ul li a i {
+  font-size: 8px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+#menu .topheader .dropdown-menu ul li:hover a {
+  color: #fff;
+}
+
+#menu .topheader .dropdown-menu ul li:hover {
+  background: #13d22e;
+  padding: 10px 15px;
+}
+
+#menu .topheader img {
+  border: 1px solid #E5E5E5;
+  margin: 40px 0 0;
+}
+
+#menu .topheading .dropdown-menu {
+  min-width: 200px;
+  left: -44%;
+}
+
+#menu .topheading .dropdown-menu li {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+#menu .topheading .dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+#menu .topheading .dropdown-menu li:hover {
+  background: #13d22e;
+}
+
+#menu .topheading .dropdown-menu li a, #menu .topheading .dropdown-menu .dropdown-submenu .dropdown-menu li a {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+}
+
+#menu .topheading .dropdown-menu li:hover a, #menu .topheading .dropdown-submenu .dropdown-menu li:hover a {
+  color: #fff;
+}
+
+#menu .topheading .dropdown-submenu .dropdown-menu {
+  left: 100%;
+}
+
+#menu .topheading .dropdown-submenu .dropdown-menu:after {
+  border: none;
+}
+
+#menu .topheading .dropdown-submenu .dropdown-menu li a:hover {
+  background: none;
+}
+
+header #srch {
+  padding: 7px 10px 0;
+  text-align: center;
+  position: relative;
+}
+
+header #srch .form-control {
+  background: #fff;
+  height: 42px;
+  opacity: 0;
+  position: absolute;
+  right: 14px;
+  top: 59px;
+  transition: all 0.5s ease 0s;
+  visibility: hidden;
+  width: 0;
+  z-index: 2;
+  border-radius: 4px;
+}
+
+header #srch:hover .form-control {
+  opacity: 1;
+  visibility: visible;
+  width: 180px;
+}
+
+header #srch button {
+  z-index: 22;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  color: #17161f;
+  font-size: 15px;
+  padding: 8px 9px 5px;
+}
+
+header #srch button:hover, header #srch:hover button {
+  background: #13d22e;
+  color: #fff;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -20px;
+}
+/*---------------------------------
+[ Slideshow / .slideshow ]
+----------------------------------- */
+
+.slideshow {
+  border-top: 1px solid #C9C9C9;
+}
+
+.slideshow img {
+  width: 100%;
+}
+
+.slideshow .owl-buttons .owl-prev {
+  left: 30px;
+}
+
+.slideshow .owl-buttons .owl-next {
+  right: 30px;
+}
+
+.slideshow .owl-buttons .owl-prev, .slideshow .owl-buttons .owl-next {
+  color: #686868;
+  background: #fff;
+  padding: 7px 18px;
+}
+
+.slideshow .owl-buttons .owl-prev:hover, .slideshow .owl-buttons .owl-next:hover {
+  background: #13d22e;
+  color: #fff;
+  opacity: 100;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.30);
+}
+
+.slideshow .owl-buttons .owl-prev {
+  border-radius: 20px 0 0 20px;
+}
+
+.slideshow .owl-buttons .owl-next {
+  border-radius: 0 20px 20px 0;
+}
+
+.slideshow .owl-buttons .owl-prev i, .slideshow .owl-buttons .owl-next i {
+  font-size: 24px;
+  margin: 0;
+}
+
+/*---------------------------------
+[ commontop / .commontop ]
+----------------------------------- */
+
+.commontop {
+  margin: 80px 0 50px;
+}
+
+.commontop p {
+  font-weight: 500;
+  color: #686868;
+  font-size: 14px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.commontop h4 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #17161f;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.commontop h4 i {
+  font-size: 20px;
+  color: #31d444;
+  margin-right: 6px;
+}
+
+.commontop h4 i:nth-child(3) {
+  margin-right: 25px;
+}
+
+.commontop h4 i:nth-child(4) {
+  margin-left: 25px;
+}
+
+/*---------------------
+[ nav-tabs / .nav-tabs ]
+----------------------- */
+
+.nav-tabs {
+  border: none;
+  margin: 0 0 50px;
+  text-align: center;
+}
+
+.nav-tabs > li {
+  float: none;
+  display: inline-block;
+  padding: 0 15px 0 0;
+}
+
+.nav-tabs > li:last-child {
+  padding: 0 0 0 0;
+}
+
+.nav-tabs > li > a {
+  border: 1px solid #CCCCCC;
+  font-weight: 400;
+  font-size: 14px;
+  color: #686868;
+  margin: 0;
+  padding: 10px 32px 11px;
+  border-radius: 40px;
+}
+
+.nav-tabs > li > a span {
+  font-weight: 700;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus, .nav-tabs > li > a:hover {
+  color: #fff;
+  background: #13d22e;
+  border: 1px solid #13d22e;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.30);
+}
+

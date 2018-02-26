@@ -1,0 +1,99 @@
+footer{
+  background:#17161f;
+  padding:45px 0 0;
+}
+footer p{
+  font-size:14px;
+  color:#eee;
+  margin:25px 0;
+  line-height:24px;
+}
+footer #newsletter{
+  margin:35px 0;
+}
+footer #newsletter .news{
+  float:left;
+  font-size:24px;
+  font-weight:500;
+  font-style:italic;
+  color:#13d22e;
+  text-transform:uppercase;
+  margin: 5px 20px 0 0;
+}
+footer #newsletter .form-group{
+  margin:0;
+}
+footer #newsletter .input-group{
+  width:100%;
+}
+footer #newsletter .input-group input{
+  width:58%;
+  height:39px;
+  font-size:14px;
+  border:1px solid #424146;
+  border-radius:40px;
+  padding:8px 15px;
+  color:#424146;
+  background:#121117;
+}
+footer #newsletter .input-group .btn-news{
+  background:#302e41;
+  color:#eee;
+  font-size:16px;
+  font-weight:400;
+  border-radius:40px;
+  margin-left:20px;
+  padding:7px 30px;
+}
+footer h5{
+  color:#13d22e;
+  font-size:18px;
+  font-weight:500;
+  margin:0;
+  text-transform:uppercase;
+}
+footer hr{
+  border-top:2px solid #13d22e;
+  width:30px;
+  margin:15px 0 30px;
+}
+footer ul{
+  margin:0;
+}
+footer li{
+  padding:0 0 20px;
+}
+footer li:last-child, footer .contact li:last-child, footer .powered li:last-child{
+  padding:0;
+}
+footer li a, footer li{
+  font-size:14px;
+  color:#eee;
+}
+footer li a:hover{
+  color:#13d22e;
+}
+footer .contact li{
+  padding:0 0 14px;
+}
+footer .contact li a i{
+  color:#13d22e;
+  margin-right:1px;
+}
+footer .social li a i{
+  margin-right:12px;
+}
+footer .powered{
+  background:#121117;
+  margin:40px 0 0;
+  padding:18px 0 17px;
+}
+footer .powered p{
+  margin:4px 0 0;
+}
+footer .powered p span{
+  color:#13d22e;
+}
+footer .powered li{
+  padding:0 24px 0 0;
+}
