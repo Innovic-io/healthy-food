@@ -5,10 +5,12 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { HeaderBarComponent } from './header-bar/header-bar.component';
 import { HeaderImgComponent } from './header-img/header-img.component';
 import { FooterComponent } from './footer/footer.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   declarations: [TopBarComponent, HeaderBarComponent, HeaderImgComponent, FooterComponent],
   exports: [TopBarComponent, HeaderBarComponent, HeaderImgComponent, FooterComponent]
