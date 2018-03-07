@@ -23,6 +23,7 @@ export class CardComponent implements OnInit {
     this.router.navigate([`shop/${id}`]);
   }
 
+
   toggle(data) {
     jQuery(data).slideToggle();
   }

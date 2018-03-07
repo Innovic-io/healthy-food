@@ -32,8 +32,8 @@
       </div>
       <div class="col-sm-2 col-md-2 col-lg-2 col-xs-12 list hidden-xs text-right">
         <div class="btn-group btn-group-sm">
-          <button type="button"  class="btn btn-default" data-toggle="tooltip" title="Grid"><i class="icon_grid-2x2"></i></button>
-          <button  type="button"  class="btn btn-default" data-toggle="tooltip" title="List"><i class="fa fa-list-ul" ></i></button>
+          <button type="button"  id="grid-view" class="btn btn-default" data-toggle="tooltip" title="Grid"><i class="icon_grid-2x2" (click)="goToList()"></i></button>
+          <button  type="button" id="list-view" class="btn btn-default" data-toggle="tooltip" title="List"><i class="fa fa-list-ul" (click)="goToList()"></i></button>
         </div>
       </div>
     </div>
