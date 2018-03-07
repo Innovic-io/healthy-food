@@ -1,0 +1,51 @@
+.pagination{
+  margin: 30px 0 0;
+  width:100%;
+}
+.pagination  li:first-child > span{
+  border:0;
+  padding:5px 20px 4px 0;
+  color: #686868;
+  margin-right: 0;
+  font-size:16px;
+  font-weight:400;
+  border-radius:8px;
+  background-color: transparent;
+}
+.pagination  li:hover:first-child > span{
+  background-color: transparent;
+  color:#686868;
+  box-shadow:none;
+}
+.pagination li  a{
+  padding:5px 13px;
+  color: #686868;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  font-size:16px;
+  font-weight:400;
+  border-radius:50%;
+}
+.pagination li  a:hover, .pagination  li span:hover, .pagination li a:focus, .pagination li span:focus, .pagination .active  a, .pagination  .active  span, .pagination  .active > a:hover, .pagination .active span:hover, .pagination .active a:focus, .pagination .active > span:focus{
+  background:#13d22e;
+  color:#fff;
+  border-color: #13d22e;
+  box-shadow: 0 1px 5px 0  rgba(0,0,0,0.30);
+}
+.pagination  li:last-child a{
+  padding:5px 19px 1px;
+}
+.pagination  li:last-child a i{
+  font-size:20px;
+}
+.pagination  li:last-child a:first-child{
+  border-radius: 20px 0 0 20px;
+}
+.pagination  li:last-child a:last-child{
+  border-radius: 0 20px 20px 0;
+}
+
+.list-unstyled {
+  display: none;
+}

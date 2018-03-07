@@ -293,31 +293,7 @@
               <i class="icon_star_alt"></i>
             </h4>
           </div>
-          <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12" *ngFor="let product of ourProducts">
-            <div class="product-thumb">
-              <div class="image">
-                <img [src]="product.image" alt="image" title="image" class="img-responsive" />
-                <div class="onhover">
-                  <ul class="list-unstyled" #slideToggle>
-                    <li>
-                      <button type="button"><i class="icon_cart"></i></button>
-                    </li>
-                    <li>
-                      <button type="button"><i class="icon_heart"></i></button>
-                    </li>
-                    <li>
-                      <button type="button"><i class="icon_piechart"></i></button>
-                    </li>
-                  </ul>
-                  <button class="icons1" (click)="toggle(slideToggle)" type="button"><i class="fa fa-bars"></i></button>
-                </div>
-              </div>
-              <div class="caption">
-                <h4>{{product.name}}</h4>
-                <p class="price">{{product.price}}</p>
-              </div>
-            </div>
-          </div>
+          <app-card  [products]="products" ></app-card>
         </div>
       </div>
     </div>

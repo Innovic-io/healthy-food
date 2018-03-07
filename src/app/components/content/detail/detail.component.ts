@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { IProduct } from '../../../services/product.inteface';
 
 // @TODO create component for starts above product
 
@@ -14,13 +15,13 @@ export class DetailComponent implements OnInit, OnDestroy {
   productID;
   imageSrc = [
     '/assets/images/product/1.png',
-    '/assets/images/product/2.png',
-    '/assets/images/product/3.png',
-    '/assets/images/product/4.png'
+    '/assets/images/small_product1.png',
+    '/assets/images/small_product2.png',
+    '/assets/images/small_product3.png'
   ];
   src = this.imageSrc[0];
 
-  ourProducts = [
+  products: IProduct[] = [
     {
       image: '/assets/images/product/1.png',
       name: 'Organic Tomato',
@@ -33,11 +34,6 @@ export class DetailComponent implements OnInit, OnDestroy {
     },
     {
       image: '/assets/images/product/3.png',
-      name: 'Organic Tomato',
-      price: '$30.00'
-    },
-    {
-      image: '/assets/images/product/4.png',
       name: 'Organic Tomato',
       price: '$30.00'
     }

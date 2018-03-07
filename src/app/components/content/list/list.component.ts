@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { IProduct } from '../../../services/product.inteface';
 
 @Component({
   selector: 'app-list',
@@ -8,40 +8,64 @@ import { Router } from '@angular/router';
 })
 export class ListComponent implements OnInit {
 
-  constructor(private router: Router) { }
 
-  ngOnInit() {}
+  products: IProduct[] = [
+    {
+      image: '/assets/images/product/1.png',
+      name: 'Organic Tomato',
+      price: '$30.00'
+    },
+    {
+      image: '/assets/images/product/2.png',
+      name: 'Organic Tomato',
+      price: '$30.00'
+    },
+    {
+      image: '/assets/images/product/3.png',
+      name: 'Organic Tomato',
+      price: '$30.00'
+    },
+    {
+      image: '/assets/images/product/4.png',
+      name: 'Organic Tomato',
+      price: '$30.00'
+    },
+    {
+      image: '/assets/images/product/5.png',
+      name: 'Organic Tomato',
+      price: '$30.00'
+    },
+    {
+      image: '/assets/images/product/6.png',
+      name: 'Organic Tomato',
+      price: '$30.00'
+    },
+    {
+      image: '/assets/images/product/7.png',
+      name: 'Organic Tomato',
+      price: '$30.00'
+    },
+    {
+      image: '/assets/images/product/8.png',
+      name: 'Organic Tomato',
+      price: '$30.00'
+    },
+    {
+      image: '/assets/images/product/1.png',
+      name: 'Organic Tomato',
+      price: '$30.00'
+    }
+  ];
 
-  toggle() {
-    jQuery('.onhover1 ul').slideToggle();
-  }
-  toggle1() {
-    jQuery('.onhover2 ul').slideToggle();
-  }
-  toggle2() {
-    jQuery('.onhover3 ul').slideToggle();
-  }
-  toggle3() {
-    jQuery('.onhover4 ul').slideToggle();
-  }
-  toggle4() {
-    jQuery('.onhover5 ul').slideToggle();
-  }
-  toggle5() {
-    jQuery('.onhover6 ul').slideToggle();
-  }
-  toggle6() {
-    jQuery('.onhover7 ul').slideToggle();
-  }
-  toggle7() {
-    jQuery('.onhover8 ul').slideToggle();
-  }
-  toggle8() {
-    jQuery('.onhover9 ul').slideToggle();
+  constructor() { }
+
+  ngOnInit() {
+    console.log(this.products);
   }
 
-  goToCard(id) {
-    this.router.navigate([`shop/${id}`]);
-  }
+
+
+
+
 
 }

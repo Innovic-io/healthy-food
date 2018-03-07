@@ -21,6 +21,7 @@ export class FilterComponent implements OnInit {
       liveSearch: true
     });
   }
+
 }
 
 
