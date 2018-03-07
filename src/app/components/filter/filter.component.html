@@ -32,12 +32,16 @@
         <div class="form-group prices">
           <label>Price</label>
             <div class="price-filter">
-            <span class="min">$ 15</span>
-            <a href="#" class="one slider-handle"></a>
-            <div class="price-range"><div class="bg"></div></div>
-            <span class="max">$ 1500</span>
-            <a href="#" class="two slider-handle"></a>
-          </div>
+
+              <app-slider (sliderChange)="onSliderChange($event)" [range]="[0, 100]"></app-slider>
+              <!--
+              <span class="min">$ 15</span>
+              <a href="#" class="one slider-handle"></a>
+              <div class="price-range"><div class="bg"></div></div>
+              <span class="max">$ 1500</span>
+              <a href="#" class="two slider-handle"></a>
+              -->
+            </div>
         </div>
       </div>
       <div class="col-sm-2 col-md-2 col-lg-2 col-xs-12 list hidden-xs text-right">

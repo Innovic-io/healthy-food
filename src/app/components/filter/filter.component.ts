@@ -12,11 +12,16 @@ export class FilterComponent implements OnInit {
 
   constructor() { }
 
+  onSliderChange(data) {
+    console.log(data);
+  }
+
   ngOnInit() {
     jQuery('.selectpicker').selectpicker({
       liveSearch: true
     });
-} }
+  }
+}
 
 
 

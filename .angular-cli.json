@@ -22,12 +22,14 @@
         "styles.scss",
         "../node_modules/font-awesome/css/font-awesome.css",
         "assets/scss/_bootstrap.scss",
-        "assets/css/bootstrap-select.min.css"
+        "assets/css/bootstrap-select.min.css",
+        "assets/css/bootstrap-slider.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
         "assets/js/bootstrap.min.js",
-        "assets/js/bootstrap-select.min.js"
+        "assets/js/bootstrap-select.min.js",
+        "assets/js/bootstrap-slider.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

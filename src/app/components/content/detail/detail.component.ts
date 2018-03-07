@@ -1,40 +1,76 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+// @TODO create component for starts above product
 
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.scss']
 })
-export class DetailComponent implements OnInit {
+export class DetailComponent implements OnInit, OnDestroy {
 
-  constructor() { }
+  quantity = 1;
+  productID;
+  imageSrc = [
+    '/assets/images/product/1.png',
+    '/assets/images/product/2.png',
+    '/assets/images/product/3.png',
+    '/assets/images/product/4.png'
+  ];
+  src = this.imageSrc[0];
 
-  ngOnInit() {}
+  ourProducts = [
+    {
+      image: '/assets/images/product/1.png',
+      name: 'Organic Tomato',
+      price: '$30.00'
+    },
+    {
+      image: '/assets/images/product/2.png',
+      name: 'Organic Tomato',
+      price: '$30.00'
+    },
+    {
+      image: '/assets/images/product/3.png',
+      name: 'Organic Tomato',
+      price: '$30.00'
+    },
+    {
+      image: '/assets/images/product/4.png',
+      name: 'Organic Tomato',
+      price: '$30.00'
+    }
+  ];
 
-  toggle() {
-    jQuery('.onhover1 ul').slideToggle();
+  constructor(private activatedRoute: ActivatedRoute) { }
+
+  ngOnInit() {
+
+    setTimeout(() => {
+      this.productID = this.activatedRoute.snapshot.params;
+    }, 1000);
   }
-  toggle1() {
-    jQuery('.onhover2 ul').slideToggle();
+
+  onIncrement() {
+    this.quantity += 1;
   }
-  toggle2() {
-    jQuery('.onhover3 ul').slideToggle();
+
+  onDecrement() {
+    this.quantity -= 1;
   }
-  toggle3() {
-    jQuery('.onhover4 ul').slideToggle();
+
+  ngOnDestroy() {
+    console.log('on destroy');
+  }
+
+  imageRotator(src) {
+    this.src = src;
+  }
+
+  toggle(data) {
+    jQuery(data).slideToggle();
   }
 
 }
 
-jQuery(function () {
-  jQuery('.add').on('click', function() {
-    const $qty = jQuery(this).closest('p').find('.qty');
-    const currentVal = parseInt($qty.val(), 10);
-    $qty.val(currentVal + 1);
-  });
-  jQuery('.minus').on('click', function() {
-    const $qty = jQuery(this).closest('p').find('.qty');
-    const currentVal = parseInt($qty.val(), 10);
-    $qty.val(currentVal - 1);
-  });
-});

@@ -23,7 +23,7 @@
         <button class="icons1" (click)="toggle()" type="button"><i class="fa fa-bars"></i></button>
       </div>
     </div>
-    <div class="caption">
+    <div class="caption" (click)="goToCard(1)">
       <h4>Organic <span>Onion</span></h4>
       <p class="price">$30.00</p>
     </div>
@@ -31,7 +31,7 @@
 </div>
 <div class="product-layout product-grid col-lg-4 col-md-4 col-sm-6 col-xs-12">
   <div class="product-thumb">
-    <div class="image">
+    <div class="image" (click)="goToCard(2)">
       <img src="/assets/images/product/2.png" alt="image" title="image" class="img-responsive" />
       <div class="onhover onhover2">
         <ul class="list-unstyled">
@@ -48,7 +48,7 @@
         <button class="icons2" (click)="toggle1()" type="button"><i class="fa fa-bars"></i></button>
       </div>
     </div>
-    <div class="caption">
+    <div class="caption" (click)="goToCard(2)">
       <h4>Organic <span>Onion</span></h4>
       <p class="price">$30.00</p>
     </div>
