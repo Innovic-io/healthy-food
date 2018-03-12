@@ -1,12 +1,15 @@
-<app-filter></app-filter>
+<app-filter [view]="view"
+            (switchView)="switchView($event)"
+            (sliderChange)="filterData($event)"
+            (onSortType)="sorting($event)"
+            (onSortByCategory)="sortByCategory($event)"></app-filter>
+
 <div class="col-sm-3 col-md-3 col-lg-3 col-xs-12 hidden-xs">
-<app-sidebar></app-sidebar>
+  <app-sidebar></app-sidebar>
 </div>
 <div class="col-sm-9">
   <div class="row">
-  <app-card  [products]="products" ></app-card>
+    <app-card *ngFor="let product of products" [product]="product" [view]="view"></app-card>
   </div>
   <app-pagination></app-pagination>
 </div>
-
-

@@ -6,3 +6,28 @@ body {
   font-family: 'Fira Sans', sans-serif !important;
   font-weight: 400;
 }
+
+/* Styling slider */
+#gc {
+
+  $greenColor: #13d22e;
+  $tooltipBg: #f4f4f4;
+  $tooltipFontColor: #000000;
+
+  .slider-handle {
+    background-color: $greenColor;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($greenColor), to($greenColor));
+    background-image: linear-gradient(to bottom, $greenColor 0%, $greenColor 100%);
+    height: 16px;
+    width: 16px;
+  }
+
+  .tooltip-inner {
+    background: $tooltipBg;
+    color: $tooltipFontColor;
+  }
+
+  .tooltip.top .tooltip-arrow {
+    border-top-color: $tooltipBg;
+  }
+}

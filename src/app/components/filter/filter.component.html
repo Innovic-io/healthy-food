@@ -4,26 +4,26 @@
       <div class="col-sm-3 col-md-3 col-lg-3 col-xs-12">
         <div class="form-group input-group input-group-sm">
           <label class="input-group-addon">Sort by     </label>
-          <select class="form-control selectpicker bs-select-hidden">
-            <option value="" selected="selected">Item</option>
-            <option value="">Name (A - Z)</option>
-            <option value="">Name (Z - A)</option>
-            <option value="">Price (Low &gt; High)</option>
-            <option value="">Price (High &gt; Low)</option>
-            <option value="">Rating (Highest)</option>
+          <select  (change)="sorting($event)" class="form-control selectpicker bs-select-hidden">
+            <option value="reset" selected="selected">Item</option>
+            <option value="a-z">Name (A - Z)</option>
+            <option value="z-a">Name (Z - A)</option>
+            <option value="l-h">Price (Low &gt; High)</option>
+            <option value="h-l">Price (High &gt; Low)</option>
+            <option value="r">Rating (Highest)</option>
           </select>
         </div>
       </div>
       <div class="col-sm-3 col-md-3 col-lg-3 col-xs-12">
         <div class="form-group input-group input-group-sm">
           <label class="input-group-addon"> Category     </label>
-          <select class="form-control selectpicker bs-select-hidden">
-            <option value="" selected="selected">All Category</option>
-            <option value="">1</option>
-            <option value="">5</option>
-            <option value="">15</option>
-            <option value="">20</option>
-            <option value="">25</option>
+          <select (change)="sortByCategory($event)" class="form-control selectpicker bs-select-hidden">
+            <option value="reset" selected="selected">All Category</option>
+            <option value="vegetable">Vegetable</option>
+            <option value="fruit">Fruit</option>
+            <option value="meat">Meat</option>
+            <option value="dried food">Dried Food</option>
+            <option value="organic juices">Organic Juices</option>
           </select>
         </div>
       </div>
@@ -32,8 +32,8 @@
       </div>
       <div class="col-sm-2 col-md-2 col-lg-2 col-xs-12 list hidden-xs text-right">
         <div class="btn-group btn-group-sm">
-          <button type="button"  id="grid-view" class="btn btn-default" data-toggle="tooltip" title="Grid"><i class="icon_grid-2x2" (click)="goToList()"></i></button>
-          <button  type="button" id="list-view" class="btn btn-default" data-toggle="tooltip" title="List"><i class="fa fa-list-ul" (click)="goToList()"></i></button>
+          <button type="button" class="btn btn-default" [ngClass]="{'active': view === 'grid'}" data-toggle="tooltip" title="Grid" (click)="switchToGrid()"><i class="icon_grid-2x2"></i></button>
+          <button  type="button" class="btn btn-default" [ngClass]="{'active': view === 'list'}" data-toggle="tooltip" title="List" (click)="switchToList()"><i class="fa fa-list-ul"></i></button>
         </div>
       </div>
     </div>

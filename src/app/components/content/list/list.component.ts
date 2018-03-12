@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IProduct } from '../../../services/product.inteface';
+import { mockProducts } from '../../../services/product.mock';
+import { ProductSortingClass } from '../../filter/product.sorting.class';
 
 @Component({
   selector: 'app-list',
@@ -8,64 +9,58 @@ import { IProduct } from '../../../services/product.inteface';
 })
 export class ListComponent implements OnInit {
 
+  products = mockProducts;
+  view = 'grid';
 
-  products: IProduct[] = [
-    {
-      image: '/assets/images/product/1.png',
-      name: 'Organic Tomato',
-      price: '$30.00'
-    },
-    {
-      image: '/assets/images/product/2.png',
-      name: 'Organic Tomato',
-      price: '$30.00'
-    },
-    {
-      image: '/assets/images/product/3.png',
-      name: 'Organic Tomato',
-      price: '$30.00'
-    },
-    {
-      image: '/assets/images/product/4.png',
-      name: 'Organic Tomato',
-      price: '$30.00'
-    },
-    {
-      image: '/assets/images/product/5.png',
-      name: 'Organic Tomato',
-      price: '$30.00'
-    },
-    {
-      image: '/assets/images/product/6.png',
-      name: 'Organic Tomato',
-      price: '$30.00'
-    },
-    {
-      image: '/assets/images/product/7.png',
-      name: 'Organic Tomato',
-      price: '$30.00'
-    },
-    {
-      image: '/assets/images/product/8.png',
-      name: 'Organic Tomato',
-      price: '$30.00'
-    },
-    {
-      image: '/assets/images/product/1.png',
-      name: 'Organic Tomato',
-      price: '$30.00'
-    }
-  ];
+  ngOnInit() {}
 
-  constructor() { }
+  filterData(range) {
 
-  ngOnInit() {
-    console.log(this.products);
+    const [ min, max ] = range;
+
+    this.products = mockProducts.filter((item) => {
+      return Math.round(item.price) >= min && Math.round(item.price) <= max;
+    });
   }
 
+  switchView(view) {
+    this.view = view;
+  }
 
+  sorting(type) {
+    switch (type) {
+      case 'l-h':
+        this.products = this.products.sort(this.sortPriceByAscending);
+        break;
+      case 'h-l':
+        this.products = this.products.sort(ProductSortingClass.sortPriceByDescending);
+        break;
+        /*
+      case 'a-z':
+        this.products = this.products.sort((a, b) => a.name > b.name);
+        break;
+      case 'z-a':
+        this.products = this.products.sort((a, b) => a.name < b.name);
+        break;
+        */
+    }
+  }
 
+  sortByCategory(selected) {
+    this.products = this.isReset(selected) ? mockProducts : mockProducts.filter(item => item.category === selected);
+  }
 
+  isReset(state) {
+    return state === 'reset';
+  }
 
+  private sortPriceByAscending(a, b) {
 
+    if (a.price > b.price) {
+      return 1;
+    } else {
+      return -1;
+    }
+
+  }
 }

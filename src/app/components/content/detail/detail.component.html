@@ -293,7 +293,7 @@
               <i class="icon_star_alt"></i>
             </h4>
           </div>
-          <app-card  [products]="products" ></app-card>
+          <app-card *ngFor="let product of products.slice(0, 3)" [product]="product" [view]="'grid'" ></app-card>
         </div>
       </div>
     </div>

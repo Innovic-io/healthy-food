@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 
-
 @Component({
   selector: 'app-slider',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -14,7 +13,7 @@ export class SliderComponent implements OnInit {
   @Input() set range(data) {
     if (data) {
       const [ min, max ] = data;
-      this.initSlider({ min, max, value: [min, max] });
+      this.initSlider({ min, max, value: [min, max]});
     }
   }
   @Output() sliderChange: EventEmitter<number[]> = new EventEmitter<number[]>();
@@ -27,7 +26,9 @@ export class SliderComponent implements OnInit {
 
   private initSlider(options) {
 
-    const local = jQuery(this.slider.nativeElement).slider(options);
+    const defaultSettings = { id: 'gc', tooltip: 'always', step: 5 };
+
+    const local = jQuery(this.slider.nativeElement).slider({ ...options, ...defaultSettings });
 
     local.on('slideStop', (change) => {
       this.sliderChange.next(change.value);

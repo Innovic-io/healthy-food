@@ -9,28 +9,22 @@
   height: 20px;
 }
 .slider.slider-horizontal .slider-track {
-  height: 8px;
+  height: 10px;
   width: 100%;
   margin-top: -5px;
   top: 50%;
   left: 0;
-  background: #13d22e;
 }
 .slider.slider-horizontal .slider-selection,
 .slider.slider-horizontal .slider-track-low,
 .slider.slider-horizontal .slider-track-high {
-  height: 8px;
-  width: 92px;
-
+  height: 100%;
+  top: 0;
+  bottom: 0;
 }
 .slider.slider-horizontal .slider-tick,
 .slider.slider-horizontal .slider-handle {
   margin-left: -10px;
-  background: #13d22e;
-  height: 18px;
-  width: 18px;
-  border: 1px solid #fff;
-
 }
 .slider.slider-horizontal .slider-tick.triangle,
 .slider.slider-horizontal .slider-handle.triangle {
@@ -92,8 +86,10 @@
   top: 0;
 }
 .slider.slider-vertical .slider-selection {
-
-
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
 }
 .slider.slider-vertical .slider-track-low,
 .slider.slider-vertical .slider-track-high {

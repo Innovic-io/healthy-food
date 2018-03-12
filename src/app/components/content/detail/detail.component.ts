@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { IProduct } from '../../../services/product.inteface';
+import { mockProducts } from '../../../services/product.mock';
 
 // @TODO create component for starts above product
 
@@ -21,23 +21,7 @@ export class DetailComponent implements OnInit, OnDestroy {
   ];
   src = this.imageSrc[0];
 
-  products: IProduct[] = [
-    {
-      image: '/assets/images/product/1.png',
-      name: 'Organic Tomato',
-      price: '$30.00'
-    },
-    {
-      image: '/assets/images/product/2.png',
-      name: 'Organic Tomato',
-      price: '$30.00'
-    },
-    {
-      image: '/assets/images/product/3.png',
-      name: 'Organic Tomato',
-      price: '$30.00'
-    }
-  ];
+  products = mockProducts;
 
   constructor(private activatedRoute: ActivatedRoute) { }
 

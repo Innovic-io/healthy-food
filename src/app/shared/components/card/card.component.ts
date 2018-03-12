@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
 })
 export class CardComponent implements OnInit {
 
-  @Input() products: IProduct[];
-
+  @Input() product: IProduct;
+  @Input() view: 'list'|'grid';
 
   constructor(private router: Router) {
   }
@@ -22,7 +22,6 @@ export class CardComponent implements OnInit {
   goToCard(id) {
     this.router.navigate([`shop/${id}`]);
   }
-
 
   toggle(data) {
     jQuery(data).slideToggle();
